@@ -1,0 +1,137 @@
+/* Reseta os estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #121212; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #333333; /* Fundo cinza escuro */
+    color: #fff; /* Texto claro */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo h1 {
+    font-size: 24px;
+    color: #ff9800; /* Cor laranja para destaque */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff9800; /* Cor laranja ao passar o mouse */
+}
+
+header .menu-mobile {
+    display: none;
+}
+
+header input[type="checkbox"] {
+    display: none;
+}
+
+header label.icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Seção Principal */
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ff9800; /* Cor laranja para o título */
+}
+
+/* Galeria */
+#galeria .grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#galeria .grid-galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra mais escura */
+}
+
+/* Rodapé */
+footer {
+    background-color: #333333; /* Fundo cinza escuro */
+    color: #fff; /* Texto claro */
+    padding: 1rem;
+    text-align: center;
+}
+
+footer .redes-sociais a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .redes-sociais a:hover {
+    color: #ff9800; /* Cor laranja ao passar o mouse */
+}
+
+footer p {
+    color: #bdbdbd; /* Texto mais suave */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    /* Menu responsivo */
+    header nav ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    header input[type="checkbox"]:checked + .menu-mobile + nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Galeria responsiva */
+    #galeria .grid-galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    /* Galeria ainda mais responsiva */
+    #galeria .grid-galeria {
+        grid-template-columns: 1fr;
+    }
+}
